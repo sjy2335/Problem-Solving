@@ -17,13 +17,6 @@ int front = 0;
 int rear = 0;
 int queue[ROW];
 
-int size_stack() {
-    if (stack_top <= 0)
-        return 0;
-    else
-        return stack_top + 1;
-}
-
 int empty_stack() {
     if (stack_top == -1)
         return 1;
@@ -56,31 +49,23 @@ int pop_stack() {
     }
 }
 
-int top_stack() {
-    if (empty_stack()) {
-        return 0;
-    }
-    else {
-        return *(stack + stack_top);
-    }
-}
-
 void dfs(int start, int max) {
-
     int v = start, w, changed = 0, i;
     visited[v] = 1;
     printf("%d ", v);
     do {
         changed = 0;
+        printf("\n-----\n");
         //finding adjacent vertex
         for (i = 1; i <= max; i++) {
             if (matrix[v][i] && !visited[i]) {
                 w = i;
-                break;   
+                break;
             }
         }
         if (visited[w] == 0) {
             push_stack(v);
+            printf("%d pushed\n", v);
             visited[w] = 1;
             printf("%d ", w);
             v = w;
@@ -88,6 +73,13 @@ void dfs(int start, int max) {
         }
         else {
             v = pop_stack();
+            for (i = 1; i <= max; i++) {
+                if (matrix[v][i] && !visited[i]) {
+                    w = i;
+                    break;
+                }
+            }
+            printf("%d popped\n", v);
         }
     } while (!empty_stack());
 }
@@ -125,15 +117,6 @@ int pop_queue() {
         front = (front + 1) % ROW;
         return queue[front];
     }
-}
-
-int front_queue() {
-    if (empty_queue()) {
-        return -1;
-    }
-
-    else
-        return queue[(front + 1) % ROW];
 }
 
 void bfs(int start, int max) {

@@ -18,5 +18,14 @@
     <ClCompile Include="1260_DFSBFS.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="10799_Stick.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1764_DBJ.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1158_Josephus.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
