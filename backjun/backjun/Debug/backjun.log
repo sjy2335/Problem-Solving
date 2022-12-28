@@ -1,2 +1,3 @@
-﻿  1158_Josephus.cpp
+﻿  1197_MST.cpp
+C:\Users\USER\Documents\GitHub\Problem-Solving\backjun\backjun\1197_MST.cpp(33,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   backjun.vcxproj -> C:\Users\USER\Documents\GitHub\Problem-Solving\backjun\Debug\backjun.exe

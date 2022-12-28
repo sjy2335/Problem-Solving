@@ -27,5 +27,11 @@
     <ClCompile Include="1158_Josephus.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1197_MST.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="12865_Knapsack.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
