@@ -1,17 +1,20 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int solution(string s) {
     
     int size = s.size();
-    int answer = size; // 1개 단위가 최소
-    
-    for (int i = 0; i < s.size(); i++) {
-        answer = 0;
+    int answer = size, tmp;
+    for (int unit = 2; unit < size/2; unit++) {
+        tmp = 0;
+        for (int i = 0; i < size; i++) {
+            string stmp = s.substr(i, unit);
 
+        }
     }
 
     return answer;
