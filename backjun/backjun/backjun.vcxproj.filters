@@ -36,5 +36,8 @@
     <ClCompile Include="1463_Making1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1929_Prime_Number.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

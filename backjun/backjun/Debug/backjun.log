@@ -1,4 +1,2 @@
-﻿  1463_Making1.cpp
-C:\Users\USER\Documents\GitHub\Problem-Solving\backjun\backjun\1463_Making1.cpp(16,13): warning C4804: '%': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
-C:\Users\USER\Documents\GitHub\Problem-Solving\backjun\backjun\1463_Making1.cpp(17,18): warning C4804: '%': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+﻿  1929_Prime_Number.cpp
   backjun.vcxproj -> C:\Users\USER\Documents\GitHub\Problem-Solving\backjun\Debug\backjun.exe
