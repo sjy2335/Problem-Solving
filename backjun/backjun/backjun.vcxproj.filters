@@ -39,5 +39,8 @@
     <ClCompile Include="1929_Prime_Number.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1260_DFS_BFS.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
