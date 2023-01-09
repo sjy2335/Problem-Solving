@@ -48,5 +48,8 @@
     <ClCompile Include="1002_Turret.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1003_Fibonacci.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
