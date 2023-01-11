@@ -2,6 +2,8 @@
 #include <string>
 #include <stack>
 
+// Stack !! -> why? push pop 형태 연산 -> why? 짝을 이루는 데이터?
+
 using namespace std;
 
 int main(void) {

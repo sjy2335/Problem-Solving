@@ -48,7 +48,13 @@
     <ClCompile Include="1002_Turret.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1003_Fibonacci.cpp">
+    <ClCompile Include="1003_Fibonacci_Count.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1931_Meeting_Room.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1753_Minimum_Path.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
