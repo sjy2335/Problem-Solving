@@ -13,49 +13,67 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Silver">
+      <UniqueIdentifier>{5c08aed1-c718-4c88-b8fa-8d98e8ef4dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Gold">
+      <UniqueIdentifier>{1e989dbd-fd5e-44cc-a64e-a9e726015ae8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1260_DFSBFS.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="10799_Stick.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1764_DBJ.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1158_Josephus.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1197_MST.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="12865_Knapsack.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1463_Making1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1929_Prime_Number.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1260_DFS_BFS.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1697_Hide-n-Seek.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Gold</Filter>
     </ClCompile>
     <ClCompile Include="1002_Turret.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Silver</Filter>
     </ClCompile>
     <ClCompile Include="1003_Fibonacci_Count.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1158_Josephus.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1260_DFS_BFS.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1260_DFSBFS.c">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1463_Making1.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1697_Hide-n-Seek.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="x1753_Minimum_Path.cpp">
+      <Filter>소스 파일\Gold</Filter>
+    </ClCompile>
+    <ClCompile Include="1764_DBJ.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1929_Prime_Number.cpp">
+      <Filter>소스 파일\Silver</Filter>
     </ClCompile>
     <ClCompile Include="1931_Meeting_Room.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Silver</Filter>
     </ClCompile>
-    <ClCompile Include="1753_Minimum_Path.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="10799_Stick.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="12865_Knapsack.cpp">
+      <Filter>소스 파일\Gold</Filter>
+    </ClCompile>
+    <ClCompile Include="2606_virus.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="2644_degree_calculation.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1012_cabbage.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1260_DFS_BFS_2.cpp">
+      <Filter>소스 파일\Silver</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
