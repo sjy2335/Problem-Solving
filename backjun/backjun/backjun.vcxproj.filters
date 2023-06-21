@@ -24,7 +24,7 @@
     <ClCompile Include="1197_MST.cpp">
       <Filter>소스 파일\Gold</Filter>
     </ClCompile>
-    <ClCompile Include="1002_Turret.cpp">
+    <ClCompile Include="1002_turret.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
     <ClCompile Include="1003_Fibonacci_Count.cpp">
@@ -73,6 +73,12 @@
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
     <ClCompile Include="1260_DFS_BFS_2.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1182_sum_subsequence.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1342_lucky_string.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
   </ItemGroup>
