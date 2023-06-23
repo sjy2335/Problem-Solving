@@ -90,5 +90,11 @@
     <ClCompile Include="1463_making1_2.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
+    <ClCompile Include="2630_making_confetti.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1992_quad_tree.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
