@@ -96,5 +96,26 @@
     <ClCompile Include="1992_quad_tree.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
+    <ClCompile Include="2571_sorting-2.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="0_boiler-plate.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1654_Cutting_LAN.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1920_Finding_Num.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="2178_Maze_Solving.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="4673_Self_Number.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="1753_Shortest_Path.cpp">
+      <Filter>소스 파일\Silver</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
