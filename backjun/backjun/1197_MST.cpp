@@ -1,63 +1,80 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <queue>
-#define P pair<int,int>
 
 using namespace std;
-// 런타임 에러가 뭘 해도 해결이 안 되네... 나중에 다시..
-// prim 알고리즘 전반적 구현 출처: https://huiung.tistory.com/76
 
-int visited[10001] = { 0 };
-vector<P> edge[100001];
-// 가중치 저장. edge[0][0].first = 가중치, edge[0][0].second = 도착 정점
+int parent[10001];
 
-int prim()
-{
-    int now = 0, dist = 0, result = 0, vertex_from_now = 0;
-    priority_queue<P> pq; // first = 가중치, second = 정점
-    pq.push(P(0, 1));
-
-    while (!pq.empty()) {
-        // 1. 현재 정점을 top의 도착 정점으로 지정
-        now = pq.top().second;
-        dist = pq.top().first;
-
-        pq.pop();
-        if (visited[now])
-            continue;
-
-        visited[now] = 1; // 정점 방문 표시
-        result += dist;
-
-        for (int i = 0; i < edge[now].size(); i++) {
-            vertex_from_now = edge[now][i].second;
-            if (!visited[vertex_from_now]) {
-                pq.push(P(edge[now][i].first * -1, vertex_from_now));
-            }
-        }
-    }
-    return result * -1;
+int get_parent(int x) {
+	if (parent[x] == x) return x;
+	return parent[x] = get_parent(parent[x]);
 }
 
-int main()
-{
-    int V = 0, E = 0, A = 0, B = 0, C = 0;
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+void union_parent(int a, int b) {
+	a = get_parent(a);
+	b = get_parent(b);
+	if (a < b) parent[b] = a;
+	else parent[a] = b;
+}
 
-    cin >> V >> E;
-    //그래프 edge 입력
-    for (int i = 0; i < E; i++) {
-        cin >> A >> C >> B;
-        edge[A].push_back(P(C, B));
-        edge[B].push_back(P(C, A));
-    }
+bool find_parent(int a, int b) {
+	a = get_parent(a);
+	b = get_parent(b);
+	if (a == b) return true;
+	return false;
+}
 
-    int result = prim();
-    // The answer must be 31
-    cout << result << '\n';
+// 전체 간선 중에서 짧은 순서대로 그래프에 포함시켜야 함.
+// 인접 리스트보다는 간선 객체 만들어서 전체다 하나의 벡터에 넣기.
+class Edge {
+public:
+	int node[2];
+	int dist;
+	Edge(int a, int b, int dist) {
+		this->node[0] = a;
+		this->node[1] = b;
+		this->dist = dist;
+	}
+	// 이후 sort 함수 적용을 위한 연산자 오버라이딩
+	bool operator <(Edge& edge) {
+		return this->dist < edge.dist;
+	}
+};
 
-    return 0;
+
+int main(void) {
+
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+	int V, E, A, B, C;
+	vector<Edge> edges;
+
+	cin >> V >> E;
+
+	for (int i = 0; i < E; i++) {
+		cin >> A >> B >> C;
+		edges.push_back(Edge(A, B, C));
+	}
+
+	sort(edges.begin(), edges.end());
+
+	int res = 0;
+
+	for (int i = 1; i <= V; i++) {
+		parent[i] = i;
+	}
+
+	for (int i = 0; i < edges.size(); i++) {
+		if (!find_parent(edges[i].node[0], edges[i].node[1])) {
+			res += edges[i].dist;
+			union_parent(edges[i].node[0], edges[i].node[1]);
+		}
+	}
+
+	cout << res << '\n';
+
+	return 0;
 }

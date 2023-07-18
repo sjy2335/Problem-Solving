@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\Gold">
       <UniqueIdentifier>{1e989dbd-fd5e-44cc-a64e-a9e726015ae8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Boiler-Plate">
+      <UniqueIdentifier>{7283a503-9b01-4758-b953-536c4fbd9287}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1197_MST.cpp">
@@ -45,7 +48,7 @@
     <ClCompile Include="1697_Hide-n-Seek.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
-    <ClCompile Include="x1753_Minimum_Path.cpp">
+    <ClCompile Include="1753_Minimum_Path.cpp">
       <Filter>소스 파일\Gold</Filter>
     </ClCompile>
     <ClCompile Include="1764_DBJ.cpp">
@@ -99,9 +102,6 @@
     <ClCompile Include="2571_sorting-2.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
-    <ClCompile Include="0_boiler-plate.cpp">
-      <Filter>소스 파일\Silver</Filter>
-    </ClCompile>
     <ClCompile Include="1654_Cutting_LAN.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
@@ -115,6 +115,12 @@
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
     <ClCompile Include="1753_Shortest_Path.cpp">
+      <Filter>소스 파일\Gold</Filter>
+    </ClCompile>
+    <ClCompile Include="boiler-plate.cpp">
+      <Filter>소스 파일\Boiler-Plate</Filter>
+    </ClCompile>
+    <ClCompile Include="2805_Cutting_Tree.cpp">
       <Filter>소스 파일\Silver</Filter>
     </ClCompile>
   </ItemGroup>

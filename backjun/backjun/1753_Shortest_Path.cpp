@@ -7,7 +7,7 @@
 
 using namespace std;
 
-bool visited[20001] = { false, };
+// bool visited[20001] = { false, };
 
 vector<pair<int, int>> graph[20001];
 int table[20001]; // 최단 거리 테이블
@@ -45,7 +45,7 @@ int V, E, K; // Vertices, Edges, Starting
 void dijkstra() {
 	
 	// priority_queue 사용해서 최단 거리 테이블에서 노드 선택 시간 최소화
-	priority_queue< pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>> > pq;
+	priority_queue< pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>> > pq; // 자동으로 첫번째 원소로 비교
 	pq.push({ 0, K }); // 시작 노드 거리 0
 	table[K] = 0;
 
