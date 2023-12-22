@@ -145,6 +145,8 @@ ipch/
 *.sdf
 *.cachefile
 
+.vs/
+
 # Visual Studio profiler
 *.psess
 *.vsp

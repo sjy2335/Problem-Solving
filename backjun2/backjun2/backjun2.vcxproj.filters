@@ -13,10 +13,37 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Silver">
+      <UniqueIdentifier>{8d55f771-3b2e-4b3b-a7c5-c5828f93daac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Gold">
+      <UniqueIdentifier>{0891ff85-977e-4d3c-95d4-70a28f004206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Boiler-Plate">
+      <UniqueIdentifier>{0e2a791b-725c-4809-976c-1e5f843334be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2805_Cutting_Tree.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="2579_Stairs.cpp">
+      <Filter>Source Files\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="2108_Statistics.cpp">
+      <Filter>Source Files\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="Boiler-Plate.cpp">
+      <Filter>Source Files\Boiler-Plate</Filter>
+    </ClCompile>
+    <ClCompile Include="1181_Sorting_Words.cpp">
+      <Filter>Source Files\Silver</Filter>
+    </ClCompile>
+    <ClCompile Include="5430_AC.cpp">
+      <Filter>Source Files\Gold</Filter>
+    </ClCompile>
+    <ClCompile Include="2667_Numbering.cpp">
+      <Filter>Source Files\Silver</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
