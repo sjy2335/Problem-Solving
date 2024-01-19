@@ -33,5 +33,11 @@
     <ClCompile Include="pre_assignment_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pre_assignment_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pre_assignment_1_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
