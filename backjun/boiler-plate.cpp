@@ -9,8 +9,6 @@ int main() {
     cin.tie(0);
     cout.tie(0);
 
-    int N;
-    cin >> N;
 
     return 0;
 }

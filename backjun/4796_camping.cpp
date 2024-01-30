@@ -20,6 +20,5 @@ int main() {
         int ans = (V / P) * L + min(V % P, L);
         
         cout << "Case " << ++i << ": " << ans << '\n';
-
     }
 }
