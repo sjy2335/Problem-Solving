@@ -5,6 +5,7 @@
     "ios": "cpp",
     "list": "cpp",
     "queue": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "deque": "cpp"
   }
 }
