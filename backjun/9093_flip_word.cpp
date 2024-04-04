@@ -24,7 +24,7 @@ int main() {
         for (size_t j = 0; j <= sentence.size(); j++)
         {
             if (j == sentence.size() || sentence[j]==' ') {
-                while(!stack.empty()){
+                while(!stack.empty()) {
                     cout << stack.back();
                     stack.pop_back();
                 }
@@ -32,12 +32,9 @@ int main() {
                 continue;
             }
             stack.push_back(sentence[j]);
-
         }
         cout << '\n';
     }
     
-
-
     return 0;
 }
