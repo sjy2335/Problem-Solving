@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     // 시간 초과가 띄우는 것부터 문제.
     // 정렬과 투포인터 알고리즘 생각하기.
+    // 배열도 생각하기. 
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
