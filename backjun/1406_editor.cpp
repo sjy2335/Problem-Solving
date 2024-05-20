@@ -38,9 +38,8 @@ int main() {
         }
         else if (cmd == 'B'){
             if (iter != myList.begin()) {
-                // auto temp = iter; // 현재 iter를 임시 변수에 저장
-                iter = myList.erase(--iter); 
                 // iter를 하나 줄이며 erase를 불러 커서 앞의 글자를 삭제
+                iter = myList.erase(--iter); 
                 // erase가 반환하는 iter로 갱신시켜줘야 한다. 메모리 관련 오류.
             }
         }

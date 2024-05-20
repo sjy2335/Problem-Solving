@@ -13,22 +13,22 @@ int main() {
     cin >> N;
     deque<int> dq;
 
-    for (size_t i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
-        string cmd;
+        int cmd;
         cin >> cmd;
-        if (cmd == "push_back"){
-            int data;
-            cin >> data;
-            dq.push_back(data);
-        }
-        else if (cmd == "push_front"){
+        if (cmd == 1){
             int data;
             cin >> data;
             dq.push_front(data);
         }
+        else if (cmd == 2){
+            int data;
+            cin >> data;
+            dq.push_back(data);
+        }
 
-        else if (cmd == "pop_front"){
+        else if (cmd == 3){
             if(dq.empty()){
                 cout << "-1";
             }
@@ -38,7 +38,7 @@ int main() {
             }
             cout << "\n";
         }
-        else if (cmd == "pop_back"){
+        else if (cmd == 4){
             if(dq.empty()){
                 cout << "-1";
             }
@@ -48,16 +48,16 @@ int main() {
             }
             cout << "\n";
         }
-        else if (cmd == "size"){
+        else if (cmd == 5){
             cout << dq.size();
             cout << "\n";
         }
-        else if (cmd == "empty"){
+        else if (cmd == 6){
             if(dq.empty()) cout << "1";
             else cout << "0";
             cout << "\n";
         }
-        else if (cmd == "front"){
+        else if (cmd == 7){
             if(dq.empty()){
                 cout << "-1";
             }
@@ -66,7 +66,7 @@ int main() {
             }
             cout << "\n";
         }
-        else if (cmd == "back"){
+        else if (cmd == 8){
             if(dq.empty()){
                 cout << "-1";
             }

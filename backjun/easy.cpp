@@ -2,21 +2,22 @@
 
 using namespace std;
 
-long A, B, V; 
-int cnt;
+int a, b, c, d, e, f;
 
-int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    
-    cin >> A >> B >> V;
-    int R = A - B;
-    if (V<A) cnt = 1;
-    else if((V-A)%R) {cnt = (V-A) / R + 2;} // V-A가 R로 나누어 떨어지지 않는 경우
-    else {cnt = (V-A) / R + 1;} // V-A가 R로 나누어 떨어지는 경우
+int main(void) {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
 
-    cout << cnt;
+	cin >> a >> b >> c >> d >> e >> f;
 
-    return 0;
+	for (int i = -999; i < 1000; i++)
+	{
+		for (int j = -999; j < 1000; j++)
+		{
+			if((a * i + b * j == c) && (d * i + e * j == f)) {cout << i << ' ' << j; return 0;}
+		}
+	}
+	
+
+	return 0;
 }
