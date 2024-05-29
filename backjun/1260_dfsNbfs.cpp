@@ -5,11 +5,19 @@ using namespace std;
 int N, M, V;
 bool visited[1001];
 
+vector<vector<int>> v;
+
+void dfs(int crnt){
+    visited[crnt] = true;
+    cout << crnt <<' ';
+    for(int next : v[crnt]){
+        if(!visited[next]) dfs(next);
+    }
+}
+
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-
-    vector<vector<int>> v;
 
     cin >> N >> M >> V;
 
@@ -25,28 +33,10 @@ int main() {
 
     // dfs
     for (int i = 0; i < N+1; i++) {
-        sort(v[i].begin(), v[i].end(),greater<>());
+        sort(v[i].begin(), v[i].end());
     }
 
-    stack<int> s;
-    s.push(V);
-
-
-    while(!s.empty()){
-        int crnt = s.top();
-        if(!visited[crnt]){
-            cout << crnt << ' ';
-            visited[crnt] = true;
-        }
-        
-        s.pop();
-
-        for (int i = 0; i < v[crnt].size(); i++)
-        {
-            int tmp = v[crnt][i];
-            s.push(tmp);
-        }
-    }
+    dfs(V);
     
 
     // bfs
