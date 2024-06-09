@@ -1,1 +1,3 @@
-Problem-Solving with algorithms and data structures, using C++
+코딩 테스트 대비 문제 풀이 기록
+
+"백준허브" 확장 프로그램으로 자동 커밋 시켜 놓음.
