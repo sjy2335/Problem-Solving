@@ -5,7 +5,7 @@ function solution(phone_book) {
     // 방법 2. 해시 맵 사용 => 우선 이거로 풀어보자.
     const hashMap = new Map();
     for (const number of phone_book) {
-        hashMap.set(number, true);
+        hashMap.set(number, true); // 값이 있는지 없는지 판단하고 싶을 때, 그냥 true 넣어주자.
     }
     
     for (const number of phone_book) {
