@@ -9,19 +9,14 @@ rl.on("line", (line) => {
 });
 
 rl.on("close", () => {
-  // 격자 보드의 크기
-  const N = Number(input[0]);
+  
+	// 입력
+  const N = Number(input[0]); // 격자 보드의 크기
+  let gxy = input[1].split(" ").map((n) => Number(n) - 1);  // 구름이 좌표 [1, 1]
+  let pxy = input[2].split(" ").map((n) => Number(n) - 1);   // 플레이어 좌표 [3, 3]
+  const board = input.slice(3).map((b) => b.split(" "));   // 보드
 
-  // 구름이 좌표 [1, 1]
-  let gxy = input[1].split(" ").map((n) => Number(n) - 1);
-
-  // 플레이어 좌표 [3, 3]
-  let pxy = input[2].split(" ").map((n) => Number(n) - 1);
-
-  // 보드
-  const board = input.slice(3).map((b) => b.split(" "));
-
-  // 각 점수를 구하는 함수
+  // 2명 점수 구하는 함수 호출
   const goormScore = playGame(N, board, gxy);
   const playerScore = playGame(N, board, pxy);
 
