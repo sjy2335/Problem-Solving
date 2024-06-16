@@ -38,11 +38,10 @@ function playGame(N, board, xy) {
     L: [0, -1],
   };
 
-  // 받아온 좌표
-  let [x, y] = xy;
-
-  // 게임을 종료시키는 플레그
-  let flag = true;
+  
+  let [x, y] = xy; // 받아온 좌표
+  let flag = true; // 게임 종료 플레그
+  
   while (flag) {
     // 지시사항 분리
     // (N이 200까지라 200R의 경우 split으로 분리 불가)
@@ -51,7 +50,7 @@ function playGame(N, board, xy) {
     const cmd = board[x][y].substring(len);
 
     // 위에 선언해 둔 이동할 좌표
-    const [tx, ty] = command[cmd];
+    const [dx, dy] = command[cmd];
 
     // 구한 count만큼 for문을 통해 이동한다.
     for (let i = 0; i < cnt; i++) {
@@ -65,8 +64,8 @@ function playGame(N, board, xy) {
       check[x][y] = 1;
 
       // 이동
-      x += tx;
-      y += ty;
+      x += dx;
+      y += dy;
 
       // 칸이 넘어갔을 경우 반대 쪽으로 이동
       if (x < 0) x = N - 1;
@@ -77,5 +76,5 @@ function playGame(N, board, xy) {
   }
 
   // 점수 구함
-  return check.flat().filter((n) => n === 1).length;
+  return check.flat().filter(n => n).length;
 }
