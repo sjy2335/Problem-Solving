@@ -1,23 +1,15 @@
 function solution(id_list, report, k) {
-    
-    const reportMap = {};
-    const answerMap = {};
-    id_list.forEach(id =>{
-        reportMap[id] = [];
-        answerMap[id] = 0;
-    })
-    
-    report.forEach(detail => {
-        const [reporter, reportee] = detail.split(' ');
-        if (!reportMap[reportee].includes(reporter)) {
-            reportMap[reportee].push(reporter);
-        }
-    })
-    
-    for (const tmpList of Object.values(reportMap)) {
-        if (tmpList.length < k) continue;
-        tmpList.forEach(id => answerMap[id]++);
+    let reports = [...new Set(report)].map(a=>{return a.split(' ')});
+    let counts = new Map();
+    for (const bad of reports){
+        counts.set(bad[1],counts.get(bad[1])+1||1)
     }
-    
-    return Object.values(answerMap);
+    let good = new Map();
+    for(const report of reports){
+        if(counts.get(report[1])>=k){
+            good.set(report[0],good.get(report[0])+1||1)
+        }
+    }
+    let answer = id_list.map(a=>good.get(a)||0)
+    return answer;
 }
