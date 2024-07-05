@@ -4,7 +4,7 @@ function solution(priorities, location) {
     
     let cnt = 0;
     while (priorities.length) {
-        if (priorities.findIndex(item => item[1] > priorities[0][1]) !== -1) {
+        if (priorities.some(item => item[1] > priorities[0][1])) {
             // 더 높은 우선순위 있으면 뒤로 보냄
             priorities.push(priorities.shift());
         } else { // 가장 높은 우선순위면 바로 실행
