@@ -1,17 +1,15 @@
 #include <bits/stdc++.h>
-
+// 7569 => 7576
 using namespace std;
 
-int dx[6] = {0, 0, -1, 1, 0, 0};
-int dy[6] = {0, -1, 0, 0, 1, 0};
-int dz[6] = {-1, 0, 0, 0, 0, 1};
+int dy[6] = {-1, 0, 0, 1};
+int dx[6] = {0, -1, 1, 0};
 
-int M, N, H;
+int M, N;
 
-int box[101][101][101];
+int box[1001][1001];
 
 typedef struct point {
-    int z;
     int y;
     int x;
 }point;
@@ -22,45 +20,43 @@ int main() {
 
     queue<point> q;
 
-    cin >> M >> N >> H;
+    cin >> M >> N;
 
-    for (int i = 0; i < H; i++) {
-        for (int j = 0; j < N; j++) {
-            for (int k = 0; k < M; k++) {
-                cin >> box[i][j][k];
-                if(box[i][j][k] == 1) q.push({i, j, k}); // z, y, x 순으로 들어감
-            }
+
+    for (int j = 0; j < N; j++) {
+        for (int k = 0; k < M; k++) {
+            cin >> box[j][k];
+            if(box[j][k] == 1) q.push({ j, k}); // z, y, x 순으로 들어감
         }
     }
 
+
     while (q.size()) {
-        auto [z1, y1, x1] = q.front();
+        auto [y1, x1] = q.front();
         q.pop();
 
         for (int i = 0; i < 6; i++) {
             int x2 = x1 + dx[i];
             int y2 = y1 + dy[i];
-            int z2 = z1 + dz[i];
 
-            if(x2<0 || y2<0 || z2 <0 || x2 >= M || y2 >= N || z2 >= H) continue;
-            if(box[z2][y2][x2] == -1) continue;
-            if(box[z2][y2][x2] == 0){
-                box[z2][y2][x2] = box[z1][y1][x1] + 1;
-                q.push({z2, y2, x2});
+            if(x2<0 || y2<0 || x2 >= M || y2 >= N) continue;
+            if(box[y2][x2] == -1) continue;
+            if(box[y2][x2] == 0){
+                box[y2][x2] = box[y1][x1] + 1;
+                q.push({y2, x2});
             }
         }
     }
 
     int day = 1;
 
-    for (int i = 0; i < H; i++) {
-        for (int j = 0; j < N; j++) {
-            for (int k = 0; k < M; k++) {
-                if(box[i][j][k]==0) {cout << -1; return 0;}
-                day = day < box[i][j][k] ? box[i][j][k] : day; 
-            }
+    for (int j = 0; j < N; j++) {
+        for (int k = 0; k < M; k++) {
+            if(box[j][k]==0) {cout << -1; return 0;}
+            day = day < box[j][k] ? box[j][k] : day; 
         }
     }
+   
  
     cout << day-1;
 
