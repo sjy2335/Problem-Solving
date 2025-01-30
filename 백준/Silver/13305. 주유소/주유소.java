@@ -4,8 +4,8 @@ import java.io.*;
 public class Main {
 
     int N;
-    int[] roads;
-    int[] prices;
+    long[] roads;
+    long[] prices;
 
     public static void main(String[] args) throws IOException {
         new Main().solution();
@@ -15,9 +15,9 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int N = Integer.parseInt(br.readLine());
-        roads = new int[N - 1];
-        prices = new int[N];
+        N = Integer.parseInt(br.readLine());
+        roads = new long[N - 1];
+        prices = new long[N];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N - 1; i++) {
@@ -29,7 +29,7 @@ public class Main {
             prices[i] = Integer.parseInt(st.nextToken());
         }
 
-        int totalPrice = 0;
+        long totalPrice = 0;
         for (int i = 0; i < N - 1;) {
             // 다음 주유소가 현재보다 싸다면 최소한으로.
             if (prices[i] > prices[i + 1]) {
@@ -39,7 +39,7 @@ public class Main {
             // -> 더 싼 곳이 나올때까지.
             } else {
                 int j = i;
-                int dist = 0;
+                long dist = 0;
                 while (j < N - 1) {
                     dist += roads[j];
                     if (prices[i] > prices[++j]) break;
