@@ -10,6 +10,7 @@ public class Main {
     public void solution() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int T = Integer.parseInt(br.readLine());
 
@@ -30,8 +31,10 @@ public class Main {
                 dfs(j, adj, visited);
                 count++;
             }
-            System.out.println(count);
+            sb.append(count).append("\n");
         }
+        bw.write(sb.toString());
+        bw.close();
     }
 
     private void dfs(int i, int[] adj, boolean[] visited) {
