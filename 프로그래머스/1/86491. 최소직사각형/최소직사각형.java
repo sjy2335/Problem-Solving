@@ -12,6 +12,6 @@ class Solution {
             list.add(Math.min(size[0], size[1]));
         }
         
-        return maxLength * list.stream().mapToInt(Integer::intValue).max().getAsInt();
+        return maxLength * list.stream().max().getAsInt();
     }
 }
