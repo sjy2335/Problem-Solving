@@ -5,12 +5,6 @@ public class Main {
 
     private final int IMPOSSIBLE = 100_000;
 
-    private int N;
-    private int K;
-
-    private int[] coins;
-    private Integer[][] caches;
-
     public static void main(String[] args) throws IOException {
         new Main().solution();
     }
@@ -19,29 +13,31 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
-        K = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken());
+        int K = Integer.parseInt(st.nextToken());
 
-        coins = new int[N];
-        for (int i = 0; i < N; i++) coins[i] = Integer.parseInt(br.readLine());
+        Set<Integer> coinSet = new HashSet<>();
+        int[] cache = new int[K + 1];
+        Arrays.fill(cache, IMPOSSIBLE);
 
-        caches = new Integer[N][K + 1];
+        for (int i = 0; i < N; i++) {
+            int value = Integer.parseInt(br.readLine());
+            if (value > K) continue;
+            coinSet.add(value);
+            cache[value] = 1;
+        }
 
-        int result = dp(0, K);
+        List<Integer> coins = new ArrayList<>(coinSet);
+        coins.sort(Collections.reverseOrder());
 
-        if (result == IMPOSSIBLE) System.out.println(-1);
-        else System.out.println(result);
-    }
+        for (int coin: coins) {
+            for (int value = coin; value <= K; value++) {
+                cache[value] = Math.min(cache[value], cache[value - coin] + 1);
+            }
+        }
 
-    // [n, N) 범위 동전들만 사용해서 k원을 만드는 데 필요한 동전의 최솟값
-    private int dp(int n, int k) {
-        if (n == N && k == 0) return 0;
-        if (n == N && k > 0) return IMPOSSIBLE;
-        if (caches[n][k] != null) return caches[n][k];
+        if (cache[K] == IMPOSSIBLE) System.out.println(-1);
+        else System.out.println(cache[K]);
 
-        if (k < coins[n]) return caches[n][k] = dp(n + 1, k);
-
-        return caches[n][k]
-            = Math.min(dp(n + 1, k), dp(n, k - coins[n]) + 1);
     }
 }
