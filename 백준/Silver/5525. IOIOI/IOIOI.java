@@ -11,19 +11,25 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        int length = 2 * N + 1;
-
         int M = Integer.parseInt(br.readLine());
         String S = br.readLine();
 
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < length; i++)
-            sb.append(i % 2 == 0 ? "I" : "O");
-        String PN = sb.toString();
+        int answer = 0; // Pn 개수
+        int count = 0; // IOI 개수
+        int i = 1;
 
-        int answer = 0;
-        for (int i = 0; i < M - length + 1; i++) {
-            if (PN.equals(S.substring(i, i + length))) answer++;
+        while (i < M - 1) {
+            if (S.charAt(i - 1) == 'I' && S.charAt(i) == 'O' && S.charAt(i + 1) == 'I') {
+                count++;
+                if (count == N) {
+                    answer++;
+                    count--; // 슬라이딩 (맨 끝 IOI 없앰 처리)
+                }
+                i += 2;
+            } else {
+                count = 0;
+                i++;
+            }
         }
 
         System.out.println(answer);
