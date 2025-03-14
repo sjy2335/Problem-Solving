@@ -1,3 +1,2 @@
-코딩 테스트 대비 문제 풀이 기록
-
-"백준허브" 확장 프로그램으로 자동 커밋
+Recording my coding test solutions in Java, C++, and Python,
+with auto-commit using the “BaekjunHub” extension.
