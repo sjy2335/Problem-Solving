@@ -1,10 +1,10 @@
 # [level 3] 퍼즐 조각 채우기 - 84021 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/84021) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/84021?language=python3) 
 
 ### 성능 요약
 
-메모리: 92.8 MB, 시간: 9.69 ms
+메모리: 11.5 MB, 시간: 8.53 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 14일 00:02:50
+2026년 06월 22일 22:05:40
 
 ### 문제 설명
 
